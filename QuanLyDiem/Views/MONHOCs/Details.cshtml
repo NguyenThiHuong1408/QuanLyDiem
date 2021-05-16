@@ -1,0 +1,43 @@
+﻿@model QuanLyDiem.Models.MONHOC
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MONHOC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenMon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenMon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoTinChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTinChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SiSo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiSo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaMon }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,40 @@
+﻿@model QuanLyDiem.Models.LOP
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="w3-center w3-text-blue" style=" font-family: Times New Roman; font-size:50px ">Xóa Thông Tin</h2>
+@Styles.Render("~/Content/css")
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>Tên Lớp</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLop)
+        </dd>
+
+        <dt>
+            <label>Sĩ Số</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiSo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay Lại", "Index")
+        </div>
+    }
+</div>

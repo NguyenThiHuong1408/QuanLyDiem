@@ -1,0 +1,67 @@
+﻿@model IEnumerable<QuanLyDiem.Models.DIEM>
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="w3-center w3-text-blue" style=" font-family: Times New Roman; font-size:50px ">ĐIỂM</h2>
+@Styles.Render("~/Content/css")
+<table class="w3-table-all w3-hoverable " style="font-family: Times New Roman; font-size:20px">
+    <tr class="w3-blue-grey">
+        <th>
+            <label>Mã Học Sinh</label>
+        </th>
+        <th>
+            <label>Tên Học Sinh</label>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HOCSINH.MaHS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HOCSINH.TenHS)
+            </td>
+
+        </tr>
+    }
+</table>
+
+<table class="w3-table-all w3-hoverable " style="font-family: Times New Roman; font-size:20px">
+    <tr class="w3-blue-grey">
+
+        <th>
+            <label>Mã Môn</label>
+        </th>
+        <th>
+            <label>Điểm Miệng</label>
+        </th>
+        <th>
+            <label>Điểm Một Tiết</label>
+        </th>
+        <th>
+            <label>Tổng</label>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MONHOC.TenMon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiemMieng)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiemMotTiet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tong)
+            </td>
+        </tr>
+    }
+</table>
+

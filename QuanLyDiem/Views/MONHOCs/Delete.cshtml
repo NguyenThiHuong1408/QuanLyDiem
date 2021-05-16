@@ -1,0 +1,48 @@
+﻿@model QuanLyDiem.Models.MONHOC
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="w3-center w3-text-blue" style=" font-family: Times New Roman; font-size:50px ">Xóa Dữ liệu</h2>
+@Styles.Render("~/Content/css")
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>Tên Môn Học</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenMon)
+        </dd>
+
+        <dt>
+            <label>Số Tín Chỉ</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTinChi)
+        </dd>
+
+        <dt>
+            <label>Sĩ Số</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiSo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay Lại", "Index")
+        </div>
+    }
+</div>
