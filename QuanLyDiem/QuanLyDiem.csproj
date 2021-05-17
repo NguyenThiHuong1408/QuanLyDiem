@@ -138,29 +138,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105160859240_Create_Table_HOCSINH.cs" />
-    <Compile Include="Migrations\202105160859240_Create_Table_HOCSINH.Designer.cs">
-      <DependentUpon>202105160859240_Create_Table_HOCSINH.cs</DependentUpon>
+    <Compile Include="Migrations\202105170843194_Create_Table_HOCSINH.cs" />
+    <Compile Include="Migrations\202105170843194_Create_Table_HOCSINH.Designer.cs">
+      <DependentUpon>202105170843194_Create_Table_HOCSINH.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105160900481_Create_Table_GIAOVIEN.cs" />
-    <Compile Include="Migrations\202105160900481_Create_Table_GIAOVIEN.Designer.cs">
-      <DependentUpon>202105160900481_Create_Table_GIAOVIEN.cs</DependentUpon>
+    <Compile Include="Migrations\202105170843402_Create_Table_GIAOVIEN.cs" />
+    <Compile Include="Migrations\202105170843402_Create_Table_GIAOVIEN.Designer.cs">
+      <DependentUpon>202105170843402_Create_Table_GIAOVIEN.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105160901093_Create_Table_MONHOC.cs" />
-    <Compile Include="Migrations\202105160901093_Create_Table_MONHOC.Designer.cs">
-      <DependentUpon>202105160901093_Create_Table_MONHOC.cs</DependentUpon>
+    <Compile Include="Migrations\202105170844042_Create_Table_MONHOC.cs" />
+    <Compile Include="Migrations\202105170844042_Create_Table_MONHOC.Designer.cs">
+      <DependentUpon>202105170844042_Create_Table_MONHOC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105160901463_Create_Table_LOP.cs" />
-    <Compile Include="Migrations\202105160901463_Create_Table_LOP.Designer.cs">
-      <DependentUpon>202105160901463_Create_Table_LOP.cs</DependentUpon>
+    <Compile Include="Migrations\202105170844256_Create_Table_LOP.cs" />
+    <Compile Include="Migrations\202105170844256_Create_Table_LOP.Designer.cs">
+      <DependentUpon>202105170844256_Create_Table_LOP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105160902094_Create_Table_DIEM.cs" />
-    <Compile Include="Migrations\202105160902094_Create_Table_DIEM.Designer.cs">
-      <DependentUpon>202105160902094_Create_Table_DIEM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105161011376_create_Table_Account.cs" />
-    <Compile Include="Migrations\202105161011376_create_Table_Account.Designer.cs">
-      <DependentUpon>202105161011376_create_Table_Account.cs</DependentUpon>
+    <Compile Include="Migrations\202105170844521_Create_Table_DIEM.cs" />
+    <Compile Include="Migrations\202105170844521_Create_Table_DIEM.Designer.cs">
+      <DependentUpon>202105170844521_Create_Table_DIEM.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -568,11 +564,6 @@
     <Content Include="Views\GIAOVIENs\Details.cshtml" />
     <Content Include="Views\GIAOVIENs\Edit.cshtml" />
     <Content Include="Views\GIAOVIENs\Index.cshtml" />
-    <Content Include="Views\HOCSINHs\Create.cshtml" />
-    <Content Include="Views\HOCSINHs\Delete.cshtml" />
-    <Content Include="Views\HOCSINHs\Details.cshtml" />
-    <Content Include="Views\HOCSINHs\Edit.cshtml" />
-    <Content Include="Views\HOCSINHs\Index.cshtml" />
     <Content Include="Views\LOPs\Create.cshtml" />
     <Content Include="Views\LOPs\Delete.cshtml" />
     <Content Include="Views\LOPs\Details.cshtml" />
@@ -586,6 +577,11 @@
     <Content Include="Views\DIEMs\TimKiem.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\HOCSINHs\Create.cshtml" />
+    <Content Include="Views\HOCSINHs\Delete.cshtml" />
+    <Content Include="Views\HOCSINHs\Details.cshtml" />
+    <Content Include="Views\HOCSINHs\Edit.cshtml" />
+    <Content Include="Views\HOCSINHs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -605,23 +601,20 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105160859240_Create_Table_HOCSINH.resx">
-      <DependentUpon>202105160859240_Create_Table_HOCSINH.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105170843194_Create_Table_HOCSINH.resx">
+      <DependentUpon>202105170843194_Create_Table_HOCSINH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105160900481_Create_Table_GIAOVIEN.resx">
-      <DependentUpon>202105160900481_Create_Table_GIAOVIEN.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105170843402_Create_Table_GIAOVIEN.resx">
+      <DependentUpon>202105170843402_Create_Table_GIAOVIEN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105160901093_Create_Table_MONHOC.resx">
-      <DependentUpon>202105160901093_Create_Table_MONHOC.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105170844042_Create_Table_MONHOC.resx">
+      <DependentUpon>202105170844042_Create_Table_MONHOC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105160901463_Create_Table_LOP.resx">
-      <DependentUpon>202105160901463_Create_Table_LOP.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105170844256_Create_Table_LOP.resx">
+      <DependentUpon>202105170844256_Create_Table_LOP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105160902094_Create_Table_DIEM.resx">
-      <DependentUpon>202105160902094_Create_Table_DIEM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105161011376_create_Table_Account.resx">
-      <DependentUpon>202105161011376_create_Table_Account.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105170844521_Create_Table_DIEM.resx">
+      <DependentUpon>202105170844521_Create_Table_DIEM.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

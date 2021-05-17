@@ -41,7 +41,7 @@
                 @Html.DisplayFor(modelItem => item.HOCSINH.MaHS)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HOCSINH.TenHS)
+                @Html.Raw(item.HOCSINH.TenHS)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MONHOC.TenMon)

@@ -17,12 +17,11 @@ namespace QuanLyDiem.Controllers
     public class HOCSINHsController : Controller
     {
         private QuanLyDiemDbcontext db = new QuanLyDiemDbcontext();
+        [Authorize]
 
         // GET: HOCSINHs
-        [Authorize]
         public ActionResult Index()
         {
-            var HOCSINHS = db.LOPS.Include(g => g.MaLop);
             return View(db.HOCSINHS.ToList());
         }
 
@@ -40,7 +39,7 @@ namespace QuanLyDiem.Controllers
             }
             return View(hOCSINH);
         }
-        
+        [Authorize]
         // GET: HOCSINHs/Create
         public ActionResult Create()
         {
@@ -120,6 +119,7 @@ namespace QuanLyDiem.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
         public ActionResult UploadFile(HttpPostedFileBase file)
         {
             //dat ten cho file
@@ -141,7 +141,7 @@ namespace QuanLyDiem.Controllers
                 HS.QueQuan = dt.Rows[i][4].ToString();
                 HS.MaLop = dt.Rows[i][5].ToString();
                 db.HOCSINHS.Add(HS);
-                db.SaveChanges();
+                db.SaveChanges(); ;
             }
             return RedirectToAction("Index");
         }
@@ -202,13 +202,14 @@ namespace QuanLyDiem.Controllers
             bulkcopy.ColumnMappings.Add(0, "MaHS");
             bulkcopy.ColumnMappings.Add(1, "TenHS");
             bulkcopy.ColumnMappings.Add(2, "NamSinh");
-            bulkcopy.ColumnMappings.Add(2, "GioiTinh");
-            bulkcopy.ColumnMappings.Add(2, "QueQuan");
-            bulkcopy.ColumnMappings.Add(2, "MaLop");
+            bulkcopy.ColumnMappings.Add(3, "GioiTinh");
+            bulkcopy.ColumnMappings.Add(4, "QueQuan");
+            bulkcopy.ColumnMappings.Add(5, "MaLop");
             con.Open();
             bulkcopy.WriteToServer(dt);
             con.Close();
         }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

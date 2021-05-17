@@ -5,11 +5,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h2 class="w3-center w3-text-blue" style=" font-family: Times New Roman; font-size:50px ">Học Sinh</h2>
 <p>
     @Html.ActionLink("Tạo Mới Dữ Liệu", "Create")
 </p>
-
 
 <table class="w3-table-all w3-hoverable " style="font-family: Times New Roman; font-size:20px">
     <tr class="w3-blue-grey  w3-center">
@@ -31,10 +31,8 @@
         <th>
             <label>Quê Quán</label>
         </th>
-
         <th></th>
     </tr>
-
     @foreach (var item in Model)
     {
         <tr>
@@ -45,7 +43,7 @@
                 @Html.DisplayFor(modelItem => item.MaHS)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TenHS)
+                @Html.Raw(item.TenHS)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NamSinh)
@@ -56,7 +54,6 @@
             <td>
                 @Html.DisplayFor(modelItem => item.QueQuan)
             </td>
-
             <td>
                 @Html.ActionLink("Sửa", "Edit", new { id = item.MaHS }) |
                 @Html.ActionLink("Xóa", "Delete", new { id = item.MaHS })
@@ -65,3 +62,4 @@
     }
 
 </table>
+

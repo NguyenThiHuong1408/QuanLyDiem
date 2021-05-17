@@ -8,6 +8,15 @@ namespace QuanLyDiem.Migrations
         public override void Up()
         {
             CreateTable(
+                "dbo.Accounts",
+                c => new
+                    {
+                        Username = c.String(nullable: false, maxLength: 128),
+                        Password = c.String(nullable: false),
+                    })
+                .PrimaryKey(t => t.Username);
+            
+            CreateTable(
                 "dbo.Diems",
                 c => new
                     {
@@ -110,6 +119,7 @@ namespace QuanLyDiem.Migrations
             DropTable("dbo.LOPS");
             DropTable("dbo.HOSSINHS");
             DropTable("dbo.Diems");
+            DropTable("dbo.Accounts");
         }
     }
 }
